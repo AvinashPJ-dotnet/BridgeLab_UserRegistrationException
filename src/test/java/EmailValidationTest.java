@@ -51,7 +51,7 @@ public class EmailValidationTest {
     }
 
     @Test
-    public void givenArrayOfEmailId_WhenValidMailId_ShouldReturnTrue() {
+    public void givenArrayOfEmailId_WhenValidMailId_ShouldReturnTrue() throws UserDetailException {
         UserRegistration userRegistration = new UserRegistration();
         boolean result = userRegistration.addEmail(this.email);
         assertEquals(isEmail,result);
