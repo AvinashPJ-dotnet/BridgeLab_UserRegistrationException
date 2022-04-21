@@ -53,7 +53,7 @@ public class EmailValidationTest {
     @Test
     public void givenArrayOfEmailId_WhenValidMailId_ShouldReturnTrue() throws UserDetailException {
         UserRegistration userRegistration = new UserRegistration();
-        boolean result = userRegistration.addEmail(this.email);
+        boolean result = userRegistration.addEmail.validate(this.email,UserDetailsRegexPattern.EMAIL);
         assertEquals(isEmail,result);
     }
 }

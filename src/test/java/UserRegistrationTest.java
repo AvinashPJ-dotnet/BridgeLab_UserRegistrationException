@@ -6,7 +6,7 @@ public class UserRegistrationTest {
     @Test
     void givenFirstName_WhenProperFirstName_ShouldReturnTrue() throws UserDetailException {
         UserRegistration userRegistration = new UserRegistration();
-        boolean result = userRegistration.addFirstName("Avinash");
+        boolean result = userRegistration.addFirstName.validate("Avinash",UserDetailsRegexPattern.FIRST_NAME_LAST_NAME);
         Assertions.assertTrue(result);
     }
 
@@ -14,7 +14,7 @@ public class UserRegistrationTest {
     @Test
     void givenFirstName_WhenNotProperFirstName_ShouldReturnFalse() throws UserDetailException {
         UserRegistration userRegistration = new UserRegistration();
-        boolean result = userRegistration.addFirstName("avinash");
+        boolean result = userRegistration.addFirstName.validate("avinash",UserDetailsRegexPattern.FIRST_NAME_LAST_NAME);
         Assertions.assertFalse(result);
     }
 
@@ -23,8 +23,7 @@ public class UserRegistrationTest {
     void givenNull_WhenFirstNameException_ShouldMatch() {
         try {
             UserRegistration userRegistration = new UserRegistration();
-            boolean result = userRegistration.addFirstName(null);
-            Assertions.assertFalse(result);
+            userRegistration.addFirstName.validate(null,UserDetailsRegexPattern.FIRST_NAME_LAST_NAME);
         } catch (UserDetailException e) {
             Assertions.assertEquals(UserDetailException.ExceptionTypes.ENTERED_NULL,e.types);
         }
@@ -34,8 +33,8 @@ public class UserRegistrationTest {
     void givenEmpty_WhenFirstNameException_ShouldMatch() {
         try {
             UserRegistration userRegistration = new UserRegistration();
-            boolean result = userRegistration.addFirstName(" ");
-            Assertions.assertFalse(result);
+            userRegistration.addFirstName.validate(" ",UserDetailsRegexPattern.FIRST_NAME_LAST_NAME);
+
         } catch (UserDetailException e) {
             Assertions.assertEquals(UserDetailException.ExceptionTypes.ENTERED_EMPTY,e.types);
         }
@@ -45,7 +44,7 @@ public class UserRegistrationTest {
     @Test
     void givenFirstName_WhenProperLastName_ShouldReturnTrue() throws UserDetailException {
         UserRegistration userRegistration = new UserRegistration();
-        boolean result = userRegistration.addLastName("Pujari");
+        boolean result = userRegistration.addLastName.validate("Pujari",UserDetailsRegexPattern.FIRST_NAME_LAST_NAME);
         Assertions.assertTrue(result);
     }
 
@@ -53,7 +52,7 @@ public class UserRegistrationTest {
     @Test
     void givenFirstName_WhenNotProperLastName_ShouldReturnFalse() throws UserDetailException {
         UserRegistration userRegistration = new UserRegistration();
-        boolean result = userRegistration.addLastName("pujari");
+        boolean result = userRegistration.addLastName.validate("pujari",UserDetailsRegexPattern.FIRST_NAME_LAST_NAME);
         Assertions.assertFalse(result);
     }
 
@@ -62,7 +61,7 @@ public class UserRegistrationTest {
     void givenNull_WhenLastNameException_ShouldMatch() {
         try {
             UserRegistration userRegistration = new UserRegistration();
-            boolean result = userRegistration.addLastName(null);
+            boolean result = userRegistration.addLastName.validate(null,UserDetailsRegexPattern.FIRST_NAME_LAST_NAME);
             Assertions.assertFalse(result);
         } catch (UserDetailException e) {
             Assertions.assertEquals(UserDetailException.ExceptionTypes.ENTERED_NULL,e.types);
@@ -73,7 +72,7 @@ public class UserRegistrationTest {
     void givenEmpty_WhenLastNameException_ShouldMatch() {
         try {
             UserRegistration userRegistration = new UserRegistration();
-            boolean result = userRegistration.addLastName(" ");
+            boolean result = userRegistration.addLastName.validate(" ",UserDetailsRegexPattern.FIRST_NAME_LAST_NAME);
             Assertions.assertFalse(result);
         } catch (UserDetailException e) {
             Assertions.assertEquals(UserDetailException.ExceptionTypes.ENTERED_EMPTY,e.types);
@@ -85,7 +84,7 @@ public class UserRegistrationTest {
     @Test
     void givenFirstName_WhenProperEmailId_ShouldReturnTrue() throws UserDetailException {
         UserRegistration userRegistration = new UserRegistration();
-        boolean result = userRegistration.addEmail("avi.100@gmail.com");
+        boolean result = userRegistration.addEmail.validate("avi.100@gmail.com",UserDetailsRegexPattern.EMAIL);
         Assertions.assertTrue(result);
     }
 
@@ -93,7 +92,7 @@ public class UserRegistrationTest {
     @Test
     void givenFirstName_WhenNotProperEmailId_ShouldReturnFalse() throws UserDetailException {
         UserRegistration userRegistration = new UserRegistration();
-        boolean result = userRegistration.addEmail("avi.100@g.c");
+        boolean result = userRegistration.addEmail.validate("avi.100@g.c",UserDetailsRegexPattern.EMAIL);
         Assertions.assertFalse(result);
     }
 
@@ -103,7 +102,7 @@ public class UserRegistrationTest {
     void givenNull_WhenEmailException_ShouldMatch() {
         try {
             UserRegistration userRegistration = new UserRegistration();
-            boolean result = userRegistration.addEmail(null);
+            boolean result = userRegistration.addEmail.validate(null,UserDetailsRegexPattern.EMAIL);
             Assertions.assertFalse(result);
         } catch (UserDetailException e) {
             Assertions.assertEquals(UserDetailException.ExceptionTypes.ENTERED_NULL,e.types);
@@ -114,7 +113,7 @@ public class UserRegistrationTest {
     void givenEmpty_WhenEmailException_ShouldMatch() {
         try {
             UserRegistration userRegistration = new UserRegistration();
-            boolean result = userRegistration.addEmail(" ");
+            boolean result = userRegistration.addEmail.validate(" ",UserDetailsRegexPattern.EMAIL);
             Assertions.assertFalse(result);
         } catch (UserDetailException e) {
             Assertions.assertEquals(UserDetailException.ExceptionTypes.ENTERED_EMPTY,e.types);
@@ -125,7 +124,7 @@ public class UserRegistrationTest {
     @Test
     void givenFirstName_WhenProperPhoneNumber_ShouldReturnTrue() throws UserDetailException {
         UserRegistration userRegistration = new UserRegistration();
-        boolean result = userRegistration.addPhoneNumber("91 7204024334");
+        boolean result = userRegistration.addPhoneNumber.validate("91 7204024334",UserDetailsRegexPattern.PHONE_NUMBER);
         Assertions.assertTrue(result);
     }
 
@@ -133,7 +132,7 @@ public class UserRegistrationTest {
     @Test
     void givenFirstName_WhenNotProperPhoneNumber_ShouldReturnFalse() throws UserDetailException {
         UserRegistration userRegistration = new UserRegistration();
-        boolean result = userRegistration.addPhoneNumber("917204024334");
+        boolean result = userRegistration.addPhoneNumber.validate("917204024334",UserDetailsRegexPattern.PHONE_NUMBER);
         Assertions.assertFalse(result);
     }
 
@@ -142,7 +141,7 @@ public class UserRegistrationTest {
     void givenNull_WhenPhoneNumberException_ShouldMatch() {
         try {
             UserRegistration userRegistration = new UserRegistration();
-            boolean result = userRegistration.addPhoneNumber(null);
+            boolean result = userRegistration.addPhoneNumber.validate(null,UserDetailsRegexPattern.PHONE_NUMBER);
             Assertions.assertFalse(result);
         } catch (UserDetailException e) {
             Assertions.assertEquals(UserDetailException.ExceptionTypes.ENTERED_NULL,e.types);
@@ -153,7 +152,7 @@ public class UserRegistrationTest {
     void givenEmpty_WhenPhoneNumberException_ShouldMatch() {
         try {
             UserRegistration userRegistration = new UserRegistration();
-            boolean result = userRegistration.addPhoneNumber(" ");
+            boolean result = userRegistration.addPhoneNumber.validate(" ",UserDetailsRegexPattern.PHONE_NUMBER);
             Assertions.assertFalse(result);
         } catch (UserDetailException e) {
             Assertions.assertEquals(UserDetailException.ExceptionTypes.ENTERED_EMPTY,e.types);
@@ -167,7 +166,7 @@ public class UserRegistrationTest {
     @Test
     void givenFirstName_WhenProperPassword_ShouldReturnTrue() throws UserDetailException {
         UserRegistration userRegistration = new UserRegistration();
-        boolean result = userRegistration.addPassword("Aa3ssdasd4$#");
+        boolean result = userRegistration.addPassword.validate("Aa3ssdasd4$#",UserDetailsRegexPattern.PASSWORD);
         Assertions.assertTrue(result);
     }
 
@@ -175,7 +174,7 @@ public class UserRegistrationTest {
     @Test
     void givenFirstName_WhenNotProperPassword_ShouldReturnFalse() throws UserDetailException {
         UserRegistration userRegistration = new UserRegistration();
-        boolean result = userRegistration.addPassword("aasasAasd$");
+        boolean result = userRegistration.addPassword.validate("aasasAasd$",UserDetailsRegexPattern.PASSWORD);
         Assertions.assertFalse(result);
     }
 
@@ -185,7 +184,7 @@ public class UserRegistrationTest {
     void givenNull_WhenPasswordException_ShouldMatch() {
         try {
             UserRegistration userRegistration = new UserRegistration();
-            boolean result = userRegistration.addPassword(null);
+            boolean result = userRegistration.addPassword.validate(null,UserDetailsRegexPattern.PASSWORD);
             Assertions.assertFalse(result);
         } catch (UserDetailException e) {
             Assertions.assertEquals(UserDetailException.ExceptionTypes.ENTERED_NULL,e.types);
@@ -196,7 +195,7 @@ public class UserRegistrationTest {
     void givenEmpty_WhenPasswordException_ShouldMatch() {
         try {
             UserRegistration userRegistration = new UserRegistration();
-            boolean result = userRegistration.addPassword(" ");
+            boolean result = userRegistration.addPassword.validate(" ",UserDetailsRegexPattern.PASSWORD);
             Assertions.assertFalse(result);
         } catch (UserDetailException e) {
             Assertions.assertEquals(UserDetailException.ExceptionTypes.ENTERED_EMPTY,e.types);

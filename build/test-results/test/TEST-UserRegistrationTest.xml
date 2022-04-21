@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="UserRegistrationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-04-19T08:26:09" hostname="AVINASHPJ-PC" time="0.04">
+<testsuite name="UserRegistrationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-04-21T10:35:57" hostname="AVINASHPJ-PC" time="0.083">
   <properties/>
-  <testcase name="givenEmpty_WhenPasswordException_ShouldMatch()" classname="UserRegistrationTest" time="0.04"/>
-  <system-out><![CDATA[Please check Password
+  <testcase name="givenEmpty_WhenFirstNameException_ShouldMatch()" classname="UserRegistrationTest" time="0.083"/>
+  <system-out><![CDATA[Please check First Name
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
