@@ -1,8 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="UserRegistrationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-04-21T10:35:57" hostname="AVINASHPJ-PC" time="0.083">
+<testsuite name="UserRegistrationTest" tests="20" skipped="0" failures="0" errors="0" timestamp="2022-04-29T17:13:47" hostname="AVINASHPJ-PC" time="0.413">
   <properties/>
-  <testcase name="givenEmpty_WhenFirstNameException_ShouldMatch()" classname="UserRegistrationTest" time="0.083"/>
-  <system-out><![CDATA[Please check First Name
+  <testcase name="givenFirstName_WhenProperPassword_ShouldReturnTrue()" classname="UserRegistrationTest" time="0.151"/>
+  <testcase name="givenFirstName_WhenNotProperPhoneNumber_ShouldReturnFalse()" classname="UserRegistrationTest" time="0.1"/>
+  <testcase name="givenFirstName_WhenNotProperFirstName_ShouldReturnFalse()" classname="UserRegistrationTest" time="0.004"/>
+  <testcase name="givenEmpty_WhenPasswordException_ShouldMatch()" classname="UserRegistrationTest" time="0.002"/>
+  <testcase name="givenFirstName_WhenProperFirstName_ShouldReturnTrue()" classname="UserRegistrationTest" time="0.003"/>
+  <testcase name="givenNull_WhenEmailException_ShouldMatch()" classname="UserRegistrationTest" time="0.013"/>
+  <testcase name="givenNull_WhenLastNameException_ShouldMatch()" classname="UserRegistrationTest" time="0.001"/>
+  <testcase name="givenEmpty_WhenFirstNameException_ShouldMatch()" classname="UserRegistrationTest" time="0.004"/>
+  <testcase name="givenFirstName_WhenNotProperEmailId_ShouldReturnFalse()" classname="UserRegistrationTest" time="0.004"/>
+  <testcase name="givenFirstName_WhenProperEmailId_ShouldReturnTrue()" classname="UserRegistrationTest" time="0.002"/>
+  <testcase name="givenEmpty_WhenEmailException_ShouldMatch()" classname="UserRegistrationTest" time="0.003"/>
+  <testcase name="givenFirstName_WhenProperPhoneNumber_ShouldReturnTrue()" classname="UserRegistrationTest" time="0.003"/>
+  <testcase name="givenNull_WhenFirstNameException_ShouldMatch()" classname="UserRegistrationTest" time="0.004"/>
+  <testcase name="givenFirstName_WhenNotProperPassword_ShouldReturnFalse()" classname="UserRegistrationTest" time="0.011"/>
+  <testcase name="givenFirstName_WhenProperLastName_ShouldReturnTrue()" classname="UserRegistrationTest" time="0.003"/>
+  <testcase name="givenEmpty_WhenLastNameException_ShouldMatch()" classname="UserRegistrationTest" time="0.002"/>
+  <testcase name="givenNull_WhenPhoneNumberException_ShouldMatch()" classname="UserRegistrationTest" time="0.001"/>
+  <testcase name="givenEmpty_WhenPhoneNumberException_ShouldMatch()" classname="UserRegistrationTest" time="0.012"/>
+  <testcase name="givenNull_WhenPasswordException_ShouldMatch()" classname="UserRegistrationTest" time="0.008"/>
+  <testcase name="givenFirstName_WhenNotProperLastName_ShouldReturnFalse()" classname="UserRegistrationTest" time="0.004"/>
+  <system-out><![CDATA[Please check Phone Number
+Please check First Name
+Please check Password
+Please check First Name
+Please check email id
+Please check email id
+Please check Password
+Please check Last Name
+Please check Phone Number
+Please check Last Name
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

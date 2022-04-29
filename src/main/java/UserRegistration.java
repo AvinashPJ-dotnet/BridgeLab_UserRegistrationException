@@ -1,12 +1,8 @@
 import java.util.regex.Pattern;
 
+
 public class UserRegistration {
     UserDetails userDetails = new UserDetails();
-
-    @FunctionalInterface
-    public interface IUserRegistrationFunction {
-        boolean validate(String value, String pattern) throws UserDetailException;
-    }
 
     IUserRegistrationFunction addFirstName = (firstName, pattern) -> {
         try {
